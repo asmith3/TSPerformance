@@ -14,7 +14,7 @@ http://www.tspcenter.com/
 
 Inspired by [@johnwemerson](http://www.stat.yale.edu/~jay/)
 
-Special thanks to [jcheng5](https://github.com/jcheng5) for their code template and style.css sheet from [this app](http://glimmer.rstudio.com/jcheng/leaflet-demo/)
+Special thanks to [jcheng5](https://github.com/jcheng5) for their code template and style.css sheet from [this app](http://glimmer.rstudio.com/jcheng/leaflet-demo/)<p>
                   [ramnathv](https://github.com/ramnathv) for their rCharts work and code
                   Everyone at the [RStudio](https://github.com/rstudio/shiny) repo
                   [User1609452](http://stackoverflow.com/users/1609452/user1609452) for their 'horizontal radio button' code
