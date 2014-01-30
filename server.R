@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
       
       h1 <- Highcharts$new()
       h1$chart(type = "spline", height="450", width="900", zoomType="x")
-      h1$title(text = chartlabel())
+      h1$title(text = paste("TSP ", input$radio, ", Past ", input$time))
       h1$set(dom = "prices")
 
       h1$xAxis(title = list(text = "Month"))
@@ -41,7 +41,7 @@ shinyServer(function(input, output) {
       h1 <- Highcharts$new()
       h1$chart(type = "spline", height="450", width="900", zoomType="x")
       h1$set(dom = "prices")    
-      h1$title(text = chartlabel())      
+      h1$title(text = paste("TSP ", input$radio, ", Past ", input$time))      
       h1$xAxis(title = list(text = "Month"))
       h1$yAxis(title = list(text = "Price (dollars)"))
       h1$series(name = "G Fund", data = subdata$G.Fund, dashStyle = "longdash", marker = list(radius="1"))

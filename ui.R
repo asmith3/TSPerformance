@@ -1,5 +1,5 @@
 library(shiny)
-library(rCharts)
+rulibrary(rCharts)
 
 row <- function(...) {
   tags$div(class="row", ...)
