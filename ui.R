@@ -57,7 +57,8 @@ shinyUI(bootstrapPage(
       HTML('<p style="margin:0;">This app licensed under <a href="http://www.gnu.org/licenses/gpl.html">GPL-3</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           Hosted by <a href="aws.amazon.com"><img src="awslogo.jpg" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
            Powered by <a href="http://www.rstudio.com/shiny/"><img src="RstudioLogo.png" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-             See code on <a href="https://github.com/asmith3/TSPerformance"><img src="gitlogo.png" width="5%" height="5%"></a>
+             See code on <a href="https://github.com/asmith3/TSPerformance"><img src="gitlogo.png" width="5%" height="5%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              v1.1
            ')
     )
         
