@@ -41,23 +41,23 @@ shinyServer(function(input, output) {
                                  labels<-oneyearlabels
       } 
       
-      c <- Highcharts$new()
-      c$chart(type = "spline", height="500", width="900", zoomType="x")
-      c$title(text = paste("TSP ", input$radio, ", Past ", input$time))
-      c$set(dom = "chart")
-      
-      c$xAxis(title = list(text = "Month"), categories = labels)
-      c$yAxis(title = list(text = "Percent Yield"))
-      
-      c$exporting(enabled = T)
-      c$credits(text="Data by www.TSPcenter.com",href="http://www.TSPcenter.com")
-      
-      c$series(name = "G Fund", data = subdata[,1], dashStyle = "Solid", marker = list(enabled=FALSE))
-      c$series(name = "F Fund", data = subdata[,2], dashStyle = "Solid", marker = list(enabled=FALSE))
-      c$series(name = "C Fund", data = subdata[,3], dashStyle = "Solid", marker = list(enabled=FALSE))
-      c$series(name = "S Fund", data = subdata[,4], dashStyle = "Solid", marker = list(enabled=FALSE))
-      c$series(name = "I Fund", data = subdata[,5], dashStyle = "Solid", marker = list(enabled=FALSE)) 
-      return(c)
+                                  c <- Highcharts$new()
+                                  c$chart(type = "spline", height="500", width="900", zoomType="x")
+                                  c$title(text = paste("TSP ", input$radio, ", Past ", input$time))
+                                  c$set(dom = "chart")
+                                  
+                                  c$xAxis(title = list(text = "Month"), categories = labels)
+                                  c$yAxis(title = list(text = "Percent Yield"))
+                                  
+                                  c$exporting(enabled = T)
+                                  c$credits(text="Data by www.TSPcenter.com",href="http://www.TSPcenter.com")
+                                  
+                                  c$series(name = "G Fund", data = subdata[,1], dashStyle = "Solid", marker = list(enabled=FALSE))
+                                  c$series(name = "F Fund", data = subdata[,2], dashStyle = "Solid", marker = list(enabled=FALSE))
+                                  c$series(name = "C Fund", data = subdata[,3], dashStyle = "Solid", marker = list(enabled=FALSE))
+                                  c$series(name = "S Fund", data = subdata[,4], dashStyle = "Solid", marker = list(enabled=FALSE))
+                                  c$series(name = "I Fund", data = subdata[,5], dashStyle = "Solid", marker = list(enabled=FALSE)) 
+                                  return(c)
     }
     
     else if(input$radio == "Prices of Funds"){
