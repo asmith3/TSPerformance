@@ -18,46 +18,46 @@ shinyUI(bootstrapPage(
     tags$p(tags$br()),
     
     row(
-      h1('Thrift Savings Performance',align="center")
+      h1('Thrift Savings Plan Account Yields',align="center")
+    ),
+    
+    row(
+      HTML("<center><a href=http://en.wikipedia.org/wiki/Thrift_Savings_Plan>(What's a Thrift Savings Plan?)</a></center>")
     ),
     
     tags$hr(), #horizontal rule, may not render in some IE versions
     
     row(
-      col( 4,tags$br()),
-      col( 2, h4("Select Chart Type:", align="right")),
+      col( 2, tags$br()),
+      col( 3, h4("Select Chart Timeline:", align="right")),
       
-      col( 3, 
+      col( 4, 
            gsub("label class=\"radio\"", "label class=\"radio inline\"", 
-                radioButtons(inputId = "radio", label="", choices = c("Yields of Funds", "Prices of Funds"))), align="left"
+                radioButtons(inputId = "radio", label="", choices = c(paste("1 Year Yields"), paste("5 Year Yields"), paste("8 Year Yields")) )), align="left"
       )    
-    ),
-    
-    row(
-      col( 4,tags$br()),      
-      col( 2, h4("Select Time Period:", align="right")),      
-      col( 3, 
-           gsub("label class=\"radio\"", "label class=\"radio inline\"", 
-                radioButtons(inputId = "time", label="", choices = c("1 Year", "5 Years"))), align="left"
-      )
     ),
     
     tags$hr(),    
     
     row( 
       col( 12, align="center",
-           showOutput("chart","highcharts")
+           showOutput("chart","morris")
       )
+    ),
+    
+    row(
+      col( 8, tags$br()),
+      col( 4, HTML("Data provided by <a href=http://www.tspcenter.com>tspcenter.com</a>"))
     ),
     
     tags$hr(),
     
     row(
       col( 3,(tags$br())),
-      HTML('<p style="margin:0;">This app licensed under <a href="http://www.gnu.org/licenses/gpl.html">GPL-3</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-          Hosted by <a href="aws.amazon.com"><img src="awslogo.jpg" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-           Powered by <a href="http://www.rstudio.com/shiny/"><img src="RstudioLogo.png" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-             See code on <a href="https://github.com/asmith3"><img src="gitlogo.png" width="5%" height="5%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp v1.2
+      HTML('<p style="margin:0;">This app licensed under <a href=http://www.gnu.org/licenses/gpl.html>GPL-3</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          Hosted by <a href=http://aws.amazon.com><img src="awslogo.jpg" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+           Powered by <a href=http://www.rstudio.com/shiny/><img src="RstudioLogo.png" width="7%" height="7%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             See code on <a href=https://github.com/asmith3/TSPerformance><img src="gitlogo.png" width="5%" height="5%"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspv1.2
            ')
     )
     
