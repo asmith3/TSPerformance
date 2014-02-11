@@ -5,7 +5,7 @@ R Shiny app for Thrift Savings Plan accounts performance
 
 Comments always welcome
 
-Hosted [Here](www.bit.ly/tsperformance)
+Hosted [Here](http://www.bit.ly/tsperformance)
 
 =============
 
